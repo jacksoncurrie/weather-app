@@ -1,0 +1,120 @@
+/* Styling with CSS Grids */
+.App {
+  display: grid;
+  background-color: #FFF;
+  text-align: center;
+  vertical-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto auto auto auto auto 1fr;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-areas: 
+    ". image"
+    "header image"
+    "title image"
+    "weather image"
+    "description image"
+    "footer image"
+    ". image"
+}
+
+header {
+  grid-area: header;
+}
+
+header label {
+  font-size: 1.1em;
+}
+
+header input {
+  padding: 10px 0;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+  color: darkblue;
+  font-size: 1.025em;
+  border: 1px solid darkgray;
+}
+
+header input:focus {
+  border: 1px solid darkblue;
+  outline: none;
+}
+
+header input:hover {
+  border: 1px solid darkblue;
+}
+
+h2 {
+  grid-area: title;
+}
+
+.weather {
+  grid-area: weather;
+  display: grid;
+  grid-template-columns: 100px 150px;
+  margin: auto;
+}
+
+.description {
+  grid-area: description;
+  font-size: 1.5em;
+  margin: 0 0 30px 0;
+}
+
+.cityImage {
+  grid-area: image;
+  position: relative;
+}
+
+.cityImage > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.cityImage > .unsplash-reference {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px black;
+  font-size: 0.8em;
+}
+
+.links {
+  text-decoration: underline;
+}
+
+.links:hover {
+  cursor: pointer;
+}
+
+footer {
+  grid-area: footer;
+  font-size: 0.75em;
+}
+
+footer > button {
+  padding: 5px 10px;
+  background: none;
+  border: 1px solid darkblue;
+  color: darkblue;
+  font-size: 0.9em;
+}
+
+footer > button:focus {
+  outline: none;
+}
+
+footer > button:hover {
+  border: 1px solid #333;
+  color: #333;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 2em;
+}
