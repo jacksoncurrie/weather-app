@@ -35,7 +35,7 @@ class App extends React.Component {
 
   fetchWeatherData = async value => {
     let res = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&APPID=${WeatherApiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&APPID=${WeatherApiKey}`
     );
     return await res.json();
   };
